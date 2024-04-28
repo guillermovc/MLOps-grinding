@@ -1,2 +1,2 @@
 ['remote "origin"']
-    url = https://dagshub.com/DagsHub/Cookiecutter-MLOps.dvc
+    url = s3://https://dagshub.com/guillermovc/MLOps-grinding

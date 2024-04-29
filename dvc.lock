@@ -40,14 +40,17 @@ stages:
     cmd: python -m src.data.make_dataset
     deps:
     - path: data/raw
-      md5: d751713988987e9331980363e24189ce.dir
-      size: 0
-      nfiles: 0
+      hash: md5
+      md5: e0c7cbb5b15bf3699a9cff9945f5899d.dir
+      size: 7650058
+      nfiles: 2
     - path: src/data/make_dataset.py
-      md5: d41d8cd98f00b204e9800998ecf8427e
-      size: 0
+      hash: md5
+      md5: 68f0952eb11c1de46725f495744ac694
+      size: 249
     outs:
     - path: data/processed
-      md5: d751713988987e9331980363e24189ce.dir
-      size: 0
-      nfiles: 0
+      hash: md5
+      md5: c7725aea3a82aae3984dbdca2b69852d.dir
+      size: 3825029
+      nfiles: 1

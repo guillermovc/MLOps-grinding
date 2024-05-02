@@ -41,16 +41,16 @@ stages:
     deps:
     - path: data/raw
       hash: md5
-      md5: e0c7cbb5b15bf3699a9cff9945f5899d.dir
-      size: 7650058
-      nfiles: 2
+      md5: a27f6bd5d5edad6877c007d02ef934cd.dir
+      size: 29012730
+      nfiles: 3
     - path: src/data/make_dataset.py
       hash: md5
-      md5: e34c4d8a06232a3f95495584f481839c
-      size: 365
+      md5: 7e80dd5332df51e0e3a92046e7afdd9d
+      size: 816
     outs:
     - path: data/processed
       hash: md5
-      md5: 26458916d66f6c2f1c2cc82afd6c34d2.dir
-      size: 3825029
-      nfiles: 1
+      md5: c4bdc242452f8dcb1dc19de50520125c.dir
+      size: 42502985
+      nfiles: 2

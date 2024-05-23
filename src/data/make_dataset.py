@@ -19,6 +19,9 @@ from datetime import datetime, timedelta, time, date
 raw_folder = Path(os.getcwd()) / 'data' / 'raw'
 processed_folder = Path(os.getcwd()) / 'data' / 'processed'
 
+# Crear el directorio si no existe...
+processed_folder.mkdir(parents=True, exist_ok=True)
+
 nombre_no_outliers = "df_model_no_outliers.parquet"
 nombre_transformado = "df_model_tidy.parquet"
 

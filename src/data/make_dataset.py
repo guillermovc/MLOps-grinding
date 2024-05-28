@@ -92,7 +92,7 @@ df_model = pd.DataFrame({ 'velocidad':vel_column, # promedio
                        'presion':presion, # de instante
                                  }, index = df.index)
 
-df_model = df_model.dropna().reset_index(drop=True)
+df_model = df_model.dropna().reset_index()
 
 print("Se procesó el archivo raw con los datos transformados")
 print(f"Shape resultante: {df_model.shape}")

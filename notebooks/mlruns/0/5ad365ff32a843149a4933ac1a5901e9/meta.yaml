@@ -1,0 +1,15 @@
+artifact_uri: file:///home/misael/repos/MLOps-grindingTPMD/notebooks/mlruns/0/5ad365ff32a843149a4933ac1a5901e9/artifacts
+end_time: 1717224227876
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5ad365ff32a843149a4933ac1a5901e9
+run_name: powerful-fly-532
+run_uuid: 5ad365ff32a843149a4933ac1a5901e9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717224223518
+status: 4
+tags: []
+user_id: misael

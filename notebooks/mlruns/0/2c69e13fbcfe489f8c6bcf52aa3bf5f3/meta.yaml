@@ -1,0 +1,15 @@
+artifact_uri: file:///home/misael/repos/MLOps-grindingTPMD/notebooks/mlruns/0/2c69e13fbcfe489f8c6bcf52aa3bf5f3/artifacts
+end_time: 1717225321478
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2c69e13fbcfe489f8c6bcf52aa3bf5f3
+run_name: clumsy-vole-958
+run_uuid: 2c69e13fbcfe489f8c6bcf52aa3bf5f3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717225170559
+status: 3
+tags: []
+user_id: misael

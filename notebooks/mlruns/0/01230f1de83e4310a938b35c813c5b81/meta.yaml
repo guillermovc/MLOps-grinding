@@ -1,0 +1,15 @@
+artifact_uri: file:///home/misael/repos/MLOps-grindingTPMD/notebooks/mlruns/0/01230f1de83e4310a938b35c813c5b81/artifacts
+end_time: 1717224717400
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 01230f1de83e4310a938b35c813c5b81
+run_name: gaudy-bear-984
+run_uuid: 01230f1de83e4310a938b35c813c5b81
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717224471572
+status: 3
+tags: []
+user_id: misael

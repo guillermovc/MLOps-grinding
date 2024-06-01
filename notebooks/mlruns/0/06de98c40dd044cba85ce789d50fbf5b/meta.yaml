@@ -1,0 +1,15 @@
+artifact_uri: file:///home/misael/repos/MLOps-grindingTPMD/notebooks/mlruns/0/06de98c40dd044cba85ce789d50fbf5b/artifacts
+end_time: 1717223611070
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 06de98c40dd044cba85ce789d50fbf5b
+run_name: bedecked-seal-73
+run_uuid: 06de98c40dd044cba85ce789d50fbf5b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717223354038
+status: 4
+tags: []
+user_id: misael

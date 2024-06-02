@@ -42,7 +42,8 @@ DagsHub: https://dagshub.com/guillermovc/MLOps-grinding
 - Para descargar el modelo y encender el servidor, utiliza el siguiente comando: `mlflow models serve -m "models:/sk-learn-svr-model/latest"`.
 - Ahora puedes hacer inferencias al modelo consultando la URL del servidor. Por ejemplo: ```curl -X POST -H "Content-Type: application/json" --data '{
   "instances": [[75.761029, 39281.348296, 65.653747, 22.932414, 64.260113, 36.574719, 71.583049, 94.815049, 54.50695, 7.101110, 65.598165, 9.183127]]
-}' http://127.0.0.1:5000/invocations```.
+}' http://127.0.0.1:5000/invocations```.  
+De igual forma, se ha añadido una libreta en `notebooks/SAAS_example.ipynb` para hacer solicitudes usando un script de python.
 - Ejemplo del servidor escuchando
 ![Servidor escuchando peticiones](ejemplo_servidor.png)
 - Ejemplo de hacer una inferencia al servidor

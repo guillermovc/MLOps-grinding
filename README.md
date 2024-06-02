@@ -33,3 +33,25 @@ Las métricas principales para medir la calidad del modelo de aprendizaje son el
 
 GitHub: https://github.com/guillermovc/MLOps-grinding
 DagsHub: https://dagshub.com/guillermovc/MLOps-grinding
+
+
+**¿Cómo correr inferencias utilizando el modelo?**
+- Instala pyenv siguiendo [esta guia]( https://gist.github.com/trongnghia203/9cc8157acb1a9faad2de95c3175aa875).
+- Ingresa a la [sección de modelos](https://dagshub.com/guillermovc/MLOps-grinding/models) e identifica el modelo de tu preferencia, por ejemplo `sk-learn-svr-model`.
+- Exporta la variable de entorno `MLFLOW_TRACKING_URI` con el enlace de dagshub. En este caso sería `export MLFLOW_TRACKING_URI=https://dagshub.com/guillermovc/MLOps-grinding.mlflow`.
+- Para descargar el modelo y encender el servidor, utiliza el siguiente comando: `mlflow models serve -m "models:/sk-learn-svr-model/latest"`.
+- Ahora puedes hacer inferencias al modelo consultando la URL del servidor. Por ejemplo: ```curl -X POST -H "Content-Type: application/json" --data '{
+  "instances": [[75.761029, 39281.348296, 65.653747, 22.932414, 64.260113, 36.574719, 71.583049, 94.815049, 54.50695, 7.101110, 65.598165, 9.183127]]
+}' http://127.0.0.1:5000/invocations```.
+- Ejemplo del servidor escuchando
+![Servidor escuchando peticiones](ejemplo_servidor.png)
+- Ejemplo de hacer una inferencia al servidor
+![alt text](ejemplo_inferencia.png)
+
+
+**Solucionar posibles problemas al encender el servidor (pyenv)**
+- Lista los entornos de `pyenv` con `pyenv versions`.
+- De preferencia desinstala todos las versiones instaladas con el comando `pyenv uninstall <version>`
+- De preferencia elimina los entornos previamente creados con el comando `rm -rf /root/.mlflow/envs/*`.
+- Vuelve a instalar una versión de python con `pyenv`, se ha probado con la versión `3.8.10` y ha funcionado. Para instalar utiliza el comando `pyenv install 3.8.10`.
+- Ahora intenta encender el servidor nuevamente.

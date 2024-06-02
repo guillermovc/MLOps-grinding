@@ -1,0 +1,15 @@
+artifact_uri: file:///home/misael/repos/MLOps-grindingTPMD/notebooks/mlruns/0/b8044d12c7c242d6a205a8a08fae1215/artifacts
+end_time: 1717296975116
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b8044d12c7c242d6a205a8a08fae1215
+run_name: respected-goose-398
+run_uuid: b8044d12c7c242d6a205a8a08fae1215
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717296972022
+status: 3
+tags: []
+user_id: root

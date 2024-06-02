@@ -1,0 +1,6 @@
+artifact_location: file:///home/Cookiecutter-MLOps/notebooks/mlruns/826817045378155921
+creation_time: 1717296648465
+experiment_id: '826817045378155921'
+last_update_time: 1717296648465
+lifecycle_stage: active
+name: SVR_hp_tune_1

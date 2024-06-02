@@ -54,4 +54,5 @@ DagsHub: https://dagshub.com/guillermovc/MLOps-grinding
 - De preferencia desinstala todos las versiones instaladas con el comando `pyenv uninstall <version>`
 - De preferencia elimina los entornos previamente creados con el comando `rm -rf /root/.mlflow/envs/*`.
 - Vuelve a instalar una versión de python con `pyenv`, se ha probado con la versión `3.8.10` y ha funcionado. Para instalar utiliza el comando `pyenv install 3.8.10`.
+- Establece la versión instalada como la versión global para que se utilice al crear los entornos. `pyenv global 3.8.10`.
 - Ahora intenta encender el servidor nuevamente.

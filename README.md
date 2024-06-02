@@ -1,78 +1,30 @@
-Cookiecutter-MLOps
-==============================
+# Proyecto Machine Learning con datos de molienda SAG
 
-A cookiecutter template employing MLOps best practices, so you can focus on building machine learning products while
-having MLOps best practices applied.
+Este proyecto forma parte de la materia de Machine Learning de la Maestría en Ciencia de Datos de la Universidad de Sonora. Se utilizan los datos de un molino SAG, los cuales fueron escalados.
 
-Instructions
-------------
-1. Clone the repo.
-2. Run `make dirs` to create the missing parts of the directory structure described below.
-3. *Optional:* Run `make virtualenv` to create a python virtual environment. Skip if using conda or some other env manager.
-    1. Run `source env/bin/activate` to activate the virtualenv.
-4. Run `make requirements` to install required python packages.
-5. Put the raw data in `data/raw`.
-6. To save the raw data to the DVC cache, run `dvc add data/raw`
-7. Edit the code files to your heart's desire.
-8. Process your data, train and evaluate your model using `dvc repro` or `make reproduce`
-9. To run the pre-commit hooks, run `make pre-commit-install`
-10. For setting up data validation tests, run `make setup-setup-data-validation`
-11. For **running** the data validation tests, run `make run-data-validation`
-12. When you're happy with the result, commit files (including .dvc files) to git.
+**Integrantes del equipo**
+* Misael Gonzalez Soria
+* Guillermo Velazquez Coronado
+* Viowio MCD
 
-Project Organization
-------------
+**¿Que problema se plantea resolver?**
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make dirs` or `make clean`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │   └── metrics.txt    <- Relevant metrics after evaluating the model.
-    │   └── training_metrics.txt    <- Relevant metrics from training the model.
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   ├── great_expectations  <- Folder containing data integrity check files
-    │   │   ├── make_dataset.py
-    │   │   └── data_validation.py  <- Script to run data integrity checks
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    ├── .pre-commit-config.yaml  <- pre-commit hooks file with selected hooks for the projects.
-    ├── dvc.lock           <- constructs the ML pipeline with defined stages.
-    └── dvc.yaml           <- Traing a model on the processed data.
+Para optimizar el control del nivel de llenado del molino, las variables controlables actuales necesitan ser complementadas con mediciones de variables externas a través de sensores inteligentes. Esto permitirá evitar que el molino opere con cargas extremadamente bajas o altas, lo que puede comprometer su eficiencia y seguridad.
 
+El objetivo de este trabajo es identificar las relaciones entre estas variables adicionales para determinar los puntos de ajuste ideales. Estos puntos de ajuste asegurarán que el molino mantenga una presión óptima según lo deseado por el operador, mejorando así su rendimiento y prolongando su vida útil.
 
---------
+**¿Porqué es un problema importante para la institución/organización/empresa?**
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+El adecuado funcionamiento del molino SAG es crucial para la empresa minera debido a su significativo consumo energético. Cualquier mejora en su eficiencia o reducción en su uso se traduce en ahorros significativos para la compañía. Por lo tanto, resolver el problema de control del nivel de llenado del molino no solo optimiza su rendimiento, sino que también impacta directamente en los costos operativos de la minera.
 
+**¿Cuales son las métricas para medir el impacto de la solución una vez obtenida?**
 
----
+Las métricas para medir el impacto de la solución incluyen el Error Absoluto Medio (MAE), el cual se espera que sea de alrededor de 3 en una escala de datos escalados. Además, se establece un límite de error de 4 como máximo aceptable. Es importante tener en cuenta que estas métricas pueden resultar ambiciosas dada la calidad variable de algunas variables. No obstante, también se considerará positivo si se logra obtener una tendencia clara entre la presión predicha y la presión real.
 
-To create a project like this, just go to https://dagshub.com/repo/create and select the **Cookiecutter DVC** project template.
+**¿Que problema de aprendizaje implica resolver?**
 
-Made with 🐶 by [DAGsHub](https://dagshub.com/).
+El problema de aprendizaje que se está abordando es de regresión. El objetivo es desarrollar un modelo que, a partir de datos históricos de variables de proceso y datos proporcionados por sensores inteligentes, pueda generar una función que mapee estas variables a la presión promedio en el molino SAG.
+
+**¿Qué metricas permiten medir la calidad del modelo de aprendizaje? ¿Cuales son sus valores deseables?**
+
+Las métricas principales para medir la calidad del modelo de aprendizaje son el Error Absoluto Medio (MAE) y el Error Absoluto Medio Puntual (pMAE). En este caso, se enfatiza en el pMAE, buscando no exceder un umbral de error de 4. Es decir, se espera que el error absoluto medio en cada predicción individual no supere el valor de 4.
